@@ -32,7 +32,7 @@ class CarRentalMenu:
         exit()
 
     def open_admin_portal(self):
-        # instance of AdminPortalMenu and pass the callback function
+        
         admin_menu = AdminPortalMenu(self.root, self.back_to_main_menu)
 
     def open_customer_portal(self):
@@ -229,36 +229,34 @@ class UserInputDialog:
         self.vehicle_data = vehicle_data
 
         # Create and configure widgets for user input
-        # (Entry widgets, labels, ettcc)
+  
         name_label = tk.Label(self.root, text="", font=("Helvetica", 180), fg='black')
         name_label.pack()
-        # Example: Entry widget for name
+ 
         name_label = tk.Label(self.root, text="Name:", font=("Helvetica", 50),fg='black')
         name_label.pack()
 
         self.name_entry = tk.Entry(self.root,width=23,font=("Helvetica", 30))
         self.name_entry.pack()
 
-        # Example: Entry widget for phone number
+
         phone_label = tk.Label(self.root, text="Phone Number:", font=("Helvetica", 50),fg='black')
         phone_label.pack()
 
         self.phone_entry = tk.Entry(self.root,width=23,font=("Helvetica", 30))
         self.phone_entry.pack()
 
-        # Example: Entry widget for number of days
+
         days_label = tk.Label(self.root, text="Number of Days:", font=("Helvetica", 50),fg='black')
         days_label.pack()
 
         self.days_entry = tk.Entry(self.root,width=23,font=("Helvetica", 30))
         self.days_entry.pack()
 
-        # Example: Checkbutton for driver
         self.driver_var = tk.IntVar()
         driver_checkbox = tk.Checkbutton(self.root, text="Driver Needed", variable=self.driver_var, font=("Helvetica", 20),fg='black')
         driver_checkbox.pack()
 
-        # Example: Button to confirm rental
         confirm_button = tk.Button(self.root, text="Confirm Rental", command=self.show_confirmation_page, font=("Helvetica", 20),fg='black')
         confirm_button.pack()
 
